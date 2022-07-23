@@ -1,6 +1,6 @@
 ## Fetchify
 
-Fetchify ClickToAddress Integration for ERPNext
+Integrate Fetchify ClickToAddress postcode lookup into ERPNext
 
 #### License
 

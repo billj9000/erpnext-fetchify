@@ -1,0 +1,210 @@
+{
+ "actions": [],
+ "creation": "2022-07-21 23:54:05.884695",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_access",
+  "click_to_address_token",
+  "section_appearance",
+  "show_logo",
+  "gfxmode",
+  "ambient",
+  "accent",
+  "show_history",
+  "column_break_7",
+  "placeholders",
+  "default_placeholder",
+  "country_placeholder",
+  "country_button",
+  "generic_error",
+  "no_results",
+  "more",
+  "section_options",
+  "get_ip_location",
+  "default_country",
+  "default_country_code",
+  "use_ceremonial_counties",
+  "transliterate",
+  "country_selector",
+  "enabled_countries"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_access",
+   "fieldtype": "Section Break",
+   "label": "Access"
+  },
+  {
+   "fieldname": "click_to_address_token",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Click-To-Address Access Token",
+   "reqd": 1
+  },
+  {
+   "description": "Please refer to Fetchify documentation for more details.",
+   "fieldname": "section_appearance",
+   "fieldtype": "Section Break",
+   "label": "Appearance"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_logo",
+   "fieldtype": "Check",
+   "label": "Show ClickToAddress Logo"
+  },
+  {
+   "default": "Below",
+   "fieldname": "gfxmode",
+   "fieldtype": "Select",
+   "label": "Search Interface Position",
+   "options": "Below\nAround"
+  },
+  {
+   "default": "light",
+   "fieldname": "ambient",
+   "fieldtype": "Select",
+   "label": "Ambient Colour Scheme",
+   "options": "light\ndark"
+  },
+  {
+   "default": "default",
+   "fieldname": "accent",
+   "fieldtype": "Select",
+   "label": "Secondary Colour",
+   "options": "default\nred\npink\npurple\ndeepPurple\nindigo\nblue\nlightBlue\ncyan\nteal\ngreen\nlightGreen\nlime\nyellow\namber\norange\ndeepOrange\nbrown\ngrey\nblueGrey"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_history",
+   "fieldtype": "Check",
+   "label": "History Navigation Arrows"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "Use placeholder text for various UI fields. If a placeholder text is left blank here then the default ClickToAddress placeholder will be used. Please refer to Fetchify documentation for more details.",
+   "fieldname": "placeholders",
+   "fieldtype": "Check",
+   "label": "Use Placeholders"
+  },
+  {
+   "depends_on": "eval: doc.placeholders != 0",
+   "fieldname": "default_placeholder",
+   "fieldtype": "Data",
+   "label": "Search Box Placeholder Text"
+  },
+  {
+   "depends_on": "eval: doc.placeholders != 0",
+   "fieldname": "country_placeholder",
+   "fieldtype": "Data",
+   "label": "Country Placeholder Text"
+  },
+  {
+   "depends_on": "eval: doc.placeholders != 0",
+   "fieldname": "country_button",
+   "fieldtype": "Data",
+   "label": "Country Button Text"
+  },
+  {
+   "depends_on": "eval: doc.placeholders != 0",
+   "fieldname": "generic_error",
+   "fieldtype": "Data",
+   "label": "Generic Error Message"
+  },
+  {
+   "depends_on": "eval: doc.placeholders != 0",
+   "fieldname": "no_results",
+   "fieldtype": "Data",
+   "label": "No Results Message"
+  },
+  {
+   "depends_on": "eval: doc.placeholders != 0",
+   "fieldname": "more",
+   "fieldtype": "Data",
+   "label": "More Results Text"
+  },
+  {
+   "description": "Please refer to Fetchify documentation for more details.",
+   "fieldname": "section_options",
+   "fieldtype": "Section Break",
+   "label": "Options"
+  },
+  {
+   "default": "0",
+   "description": "Set the default country based on the user's IP location",
+   "fieldname": "get_ip_location",
+   "fieldtype": "Check",
+   "label": "Get IP Location"
+  },
+  {
+   "depends_on": "eval: doc.get_ip_location == 0",
+   "description": "The default country to use when IP Location disabled",
+   "fieldname": "default_country",
+   "fieldtype": "Link",
+   "label": "Default Country",
+   "options": "Country"
+  },
+  {
+   "fetch_from": "default_country.code",
+   "fieldname": "default_country_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Default Country Code",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "description": "Use ceremonial counties in retrieved UK addresses",
+   "fieldname": "use_ceremonial_counties",
+   "fieldtype": "Check",
+   "label": "Use UK Ceremonial Counties"
+  },
+  {
+   "default": "0",
+   "description": "Transliterate addresses into Latin script",
+   "fieldname": "transliterate",
+   "fieldtype": "Check",
+   "label": "Transliterate"
+  },
+  {
+   "default": "0",
+   "fieldname": "country_selector",
+   "fieldtype": "Check",
+   "label": "Enable Country Selector"
+  },
+  {
+   "description": "List of countries that may be selected for search. Leave blank to allow all countries.",
+   "fieldname": "enabled_countries",
+   "fieldtype": "Table MultiSelect",
+   "label": "Enabled Countries",
+   "options": "Fetchify Country"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2022-07-23 17:26:42.055264",
+ "modified_by": "Administrator",
+ "module": "Fetchify",
+ "name": "Fetchify Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

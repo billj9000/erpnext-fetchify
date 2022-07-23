@@ -9,9 +9,9 @@ from fetchify import __version__ as version
 setup(
 	name="fetchify",
 	version=version,
-	description="Fetchify ClickToAddress Integration for ERPNext",
+	description="Integrate Fetchify ClickToAddress postcode lookup into ERPNext",
 	author="SAABits Ltd.",
-	author_email="billj@saab9000.com",
+	author_email="billj@saabits.com",
 	packages=find_packages(),
 	zip_safe=False,
 	include_package_data=True,

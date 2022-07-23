@@ -3,10 +3,10 @@ from . import __version__ as app_version
 app_name = "fetchify"
 app_title = "Fetchify"
 app_publisher = "SAABits Ltd."
-app_description = "Fetchify ClickToAddress Integration for ERPNext"
+app_description = "Integrate Fetchify ClickToAddress postcode lookup into ERPNext"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
-app_email = "billj@saab9000.com"
+app_email = "billj@saabits.com"
 app_license = "GNU General Public License v3.0"
 
 # Includes in <head>
@@ -31,7 +31,7 @@ app_license = "GNU General Public License v3.0"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Address" : "public/js/address.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
