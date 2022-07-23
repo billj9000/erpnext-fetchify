@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include fetchify *.css
+recursive-include fetchify *.csv
+recursive-include fetchify *.html
+recursive-include fetchify *.ico
+recursive-include fetchify *.js
+recursive-include fetchify *.json
+recursive-include fetchify *.md
+recursive-include fetchify *.png
+recursive-include fetchify *.py
+recursive-include fetchify *.svg
+recursive-include fetchify *.txt
+recursive-exclude fetchify *.pyc
