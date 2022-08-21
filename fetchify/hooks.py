@@ -56,7 +56,7 @@ doctype_js = {"Address" : "public/js/address.js"}
 # Installation
 # ------------
 
-# before_install = "fetchify.install.before_install"
+before_install = "fetchify.install.before_install"
 # after_install = "fetchify.install.after_install"
 
 # Uninstallation
