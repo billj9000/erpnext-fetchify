@@ -138,6 +138,6 @@ frappe.ui.form.on('Address', {
 	{
 	    // Just before saving the document, clear the "search" field so we don't save it
         frm.doc.search_for_address = "";
-        input_search.value = "";
+    //    input_search.value = "";
 	}
 })
